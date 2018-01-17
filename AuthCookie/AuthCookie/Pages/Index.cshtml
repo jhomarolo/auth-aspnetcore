@@ -1,0 +1,23 @@
+﻿@page
+@model IndexModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<br />
+<p>
+    @Model.Message
+</p>
+
+<p>
+    Faça login:
+</p>
+<div asp-validation-summary="All"></div>
+<form method="POST" class="form-group">
+    <div>Email: <input asp-for="Customer.Email" type="email" class="input-group" /></div>
+    <br />
+    <div>Password: <input asp-for="Customer.Password" type="password" class="input-group" /></div>
+    <br />
+    <input type="submit" class="btn btn-default" />
+</form>
